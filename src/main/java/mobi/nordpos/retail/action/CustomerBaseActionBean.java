@@ -34,8 +34,8 @@ public abstract class CustomerBaseActionBean extends BaseActionBean {
         return customer;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomer(Customer customerVar) {
+        customer = customerVar;
     }
 
 }

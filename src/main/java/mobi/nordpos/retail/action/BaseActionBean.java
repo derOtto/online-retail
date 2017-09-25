@@ -17,15 +17,10 @@ package mobi.nordpos.retail.action;
 
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
-import java.net.UnknownHostException;
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
-import javax.servlet.http.HttpServletRequest;
-import mobi.nordpos.dao.model.Application;
 import mobi.nordpos.dao.factory.ApplicationPersist;
 import mobi.nordpos.dao.factory.LocationPersist;
 import mobi.nordpos.dao.factory.UserPersist;
+import mobi.nordpos.dao.model.Application;
 import mobi.nordpos.dao.model.Location;
 import mobi.nordpos.dao.model.User;
 import mobi.nordpos.retail.ext.MobileActionBeanContext;
@@ -38,6 +33,12 @@ import net.sourceforge.stripes.validation.ValidationErrors;
 import net.sourceforge.stripes.validation.ValidationMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.servlet.http.HttpServletRequest;
+import java.net.UnknownHostException;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Andrey Svininykh <svininykh@gmail.com>
