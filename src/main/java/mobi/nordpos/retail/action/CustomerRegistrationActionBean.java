@@ -15,21 +15,18 @@
  */
 package mobi.nordpos.retail.action;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
-import java.sql.SQLException;
 import mobi.nordpos.dao.model.Customer;
 import mobi.nordpos.retail.ext.Public;
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.SimpleMessage;
-import net.sourceforge.stripes.validation.SimpleError;
-import net.sourceforge.stripes.validation.Validate;
-import net.sourceforge.stripes.validation.ValidateNestedProperties;
-import net.sourceforge.stripes.validation.ValidationErrors;
-import net.sourceforge.stripes.validation.ValidationMethod;
+import net.sourceforge.stripes.validation.*;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 
 /**
  * @author Andrey Svininykh <svininykh@gmail.com>
@@ -54,7 +51,7 @@ public class CustomerRegistrationActionBean extends CustomerBaseActionBean {
 //        try {
             customerPersist.init(getDataBaseConnection());
             Customer customer = getCustomer();
-            customer.setSearchkey(customer.getName());
+            customer.setSearchKey(customer.getName());
             getContext().getMessages().add(
                     new SimpleMessage(getLocalizationKey("message.Customer.registered"),
                             customerPersist.add(customer).getName())
